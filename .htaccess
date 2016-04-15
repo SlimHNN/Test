@@ -1,0 +1,32 @@
+Options -Indexes
+ErrorDocument 404 /Rego/404/404.php
+
+SetEnvIfNoCase User-Agent .*Twiceler.* bad_bot
+SetEnvIfNoCase User-Agent .*Java.* bad_bot
+SetEnvIfNoCase User-Agent .*Sogou web spider.* bad_bot
+SetEnvIfNoCase User-Agent .*YandexBot.* bad_bot
+SetEnvIfNoCase User-Agent .*spbot.* bad_bot
+SetEnvIfNoCase User-Agent .*Baiduspider.* bad_bot
+SetEnvIfNoCase User-Agent .*libwww-perl.* bad_bot
+SetEnvIfNoCase User-Agent .*DotBot.* bad_bot
+SetEnvIfNoCase User-Agent .*MJ12bot.* bad_bot
+SetEnvIfNoCase User-Agent .*Jakarta Commons.* bad_bot
+SetEnvIfNoCase User-Agent .*Sosospider.* bad_bot
+SetEnvIfNoCase User-Agent .*bixolabs.* bad_bot
+SetEnvIfNoCase User-Agent .*ia_archiver.* bad_bot
+SetEnvIfNoCase User-Agent .*GeoHasher.* bad_bot
+SetEnvIfNoCase User-Agent .*Indy Library.* bad_bot
+SetEnvIfNoCase User-Agent .*Yeti.* bad_bot
+SetEnvIfNoCase User-Agent .*Mail.Ru.* bad_bot
+SetEnvIfNoCase User-Agent .*LMQueueBot.* bad_bot
+SetEnvIfNoCase User-Agent .*VoilaBot.* bad_bot
+SetEnvIfNoCase User-Agent .*ScrapeBox.* bad_bot
+SetEnvIfNoCase User-Agent .*Huaweisymantecspider.* bad_bot
+SetEnvIfNoCase User-Agent .*larbin.* bad_bot
+SetEnvIfNoCase User-Agent .*Nutch.* bad_bot
+
+
+
+order allow,deny
+deny from env=bad_bot
+allow from all
